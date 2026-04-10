@@ -187,11 +187,11 @@
 
     /* ── PROJECTS ── */
     .projects { background: var(--bg); }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+   .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
     .project-card {
       background: var(--card); border-radius: 24px;
       padding: 32px; border: 1px solid var(--border);
@@ -545,34 +545,80 @@
     </div>
 
     <div class="award-card">
-      <div class="award-year">2024</div>
+      <div class="award-year">2025</div>
       <div class="award-icon">🥇</div>
-      <h3>Лучший проект года</h3>
-      <p>Внутренняя премия за запуск и масштабирование программы адаптации</p>
+      <h3>Корпоративная премия X5 — Проект года</h3>
+      <p>Номинация «Проект года» · Категория «Инновации» за Exit-интервью</p>
     </div>
 
     <div class="award-card">
-      <div class="award-year">2023</div>
-      <div class="award-icon">⭐</div>
-      <h3>Корпоративная премия X5</h3>
-      <p>Номинация «Командный результат»</p>
+      <div class="award-year">2025</div>
+      <div class="award-icon">🤖</div>
+      <h3>Корпоративная премия X5 — AI</h3>
+      <p>Номинация «Эффективность в действии» за внедрение AI-технологий в адаптацию</p>
     </div>
 
     <div class="award-card">
-      <div class="award-year">2023</div>
-      <div class="award-icon">🎖️</div>
-      <h3>Признание руководства</h3>
-      <p>За вклад в развитие системы адаптации и онбординга</p>
+      <div class="award-year">2025</div>
+      <div class="award-icon">⚡</div>
+      <h3>HR Force Awards — AI-проект</h3>
+      <p>Победитель в номинации «HR-проект года с применением AI» (адаптация)</p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-year">2025</div>
+      <div class="award-icon">📉</div>
+      <h3>HR Force Awards — Текучесть</h3>
+      <p>Победитель в номинации «Снижение текучести» за проект Exit-интервью</p>
     </div>
 
   </div>
 </section>
 
+
+Claude Sonnet 4.6
+
+Конечно! Вот только два изменения:
+
+1. Сетка 4 в ряд — найди в CSS через Ctrl+F:
+
+css
+
+Копировать код
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+Замени на:
+
+css
+
+Копировать код
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+2. Контакты — найди через Ctrl+F блок:
+
+html
+
+Предпросмотр в браузере
+
+Копировать код
+<!-- CONTACT -->
+Замени весь блок до <!-- FOOTER --> на:
+
+html
+
+Предпросмотр в браузере
+
+Копировать код
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="section-label">Контакты</div>
-    <div class="section-title"><em>Контакты</em></div>
     <p>Открыта к новым проектам и интересным предложениям</p>
     <div class="contact-links">
 
@@ -585,24 +631,24 @@
         <div class="contact-link-arrow">→</div>
       </a>
 
-      <a href="https://t.me/username" class="contact-link">
-        <div class="contact-link-icon">✈️</div>
+      <a href="tel:+79057828868" class="contact-link">
+        <div class="contact-link-icon">📞</div>
         <div class="contact-link-text">
-          <strong>Telegram</strong>
-          <span>@username</span>
+          <strong>Телефон</strong>
+          <span>+7 905 782 88 68</span>
+        </div>
+        <div class="contact-link-text-icons">
+          <span title="Telegram">✈️</span>
+          <span title="WhatsApp">💬</span>
         </div>
         <div class="contact-link-arrow">→</div>
       </a>
-
-      <a href="https://linkedin.com/in/username" class="contact-link">
-        <div class="contact-link-icon">💼</div>
-        <div class="contact-link-text">
-          <strong>LinkedIn</strong>
-          <span>linkedin.com/in/username</span>
-        </div>
-        <div class="contact-link-arrow">→</div>
-      </a>
-
+.contact-link-text-icons {
+      display: flex;
+      gap: 8px;
+      margin-left: 12px;
+      font-size: 18px;
+    }
     </div>
   </div>
 </section>
