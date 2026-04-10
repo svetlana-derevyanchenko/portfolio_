@@ -263,9 +263,10 @@
     .contact-links { display: flex; flex-direction: column; gap: 14px; }
     .contact-link {
       display: flex; align-items: center; gap: 16px;
-      background: var(--bg); border-radius: 16px;
-      padding: 18px 24px; text-decoration: none; color: var(--dark);
-      border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s;
+  background: var(--bg); border-radius: 16px;
+  padding: 18px 24px; text-decoration: none; color: var(--dark);
+  border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s;
+  justify-content: space-between;
     }
     .contact-link:hover { border-color: var(--accent); transform: translateX(4px); }
     .contact-link-icon {
@@ -289,11 +290,10 @@
       filter: invert(0);
     }
     .contact-link-arrow {
-      margin-left: 12px;
-      color: var(--muted);
-      font-size: 18px;
-      .contact-link-text {
-      text-align: left;
+      margin-left: auto;
+  color: var(--muted);
+  font-size: 18px;
+  flex-shrink: 0;
     }
     }
     /* ── FOOTER ── */
