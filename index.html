@@ -273,7 +273,23 @@
     .contact-link-text strong { font-size: 14px; display: block; }
     .contact-link-text span { font-size: 13px; color: var(--muted); }
     .contact-link-arrow { margin-left: auto; color: var(--muted); font-size: 18px; }
-
+.contact-link-messengers {
+      display: flex;
+      gap: 8px;
+      margin-left: auto;
+      align-items: center;
+    }
+    .contact-link-messengers img {
+      width: 20px;
+      height: 20px;
+      opacity: 0.5;
+      filter: invert(0);
+    }
+    .contact-link-arrow {
+      margin-left: 12px;
+      color: var(--muted);
+      font-size: 18px;
+    }
     /* ── FOOTER ── */
     footer {
       padding: 32px 60px; border-top: 1px solid var(--border);
@@ -575,50 +591,11 @@
   </div>
 </section>
 
-
-Claude Sonnet 4.6
-
-Конечно! Вот только два изменения:
-
-1. Сетка 4 в ряд — найди в CSS через Ctrl+F:
-
-css
-
-Копировать код
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 20px;
-}
-Замени на:
-
-css
-
-Копировать код
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-2. Контакты — найди через Ctrl+F блок:
-
-html
-
-Предпросмотр в браузере
-
-Копировать код
-<!-- CONTACT -->
-Замени весь блок до <!-- FOOTER --> на:
-
-html
-
-Предпросмотр в браузере
-
-Копировать код
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="section-label">Контакты</div>
+    <div class="section-title"><em>Контакты</em></div>
     <p>Открыта к новым проектам и интересным предложениям</p>
     <div class="contact-links">
 
@@ -637,18 +614,13 @@ html
           <strong>Телефон</strong>
           <span>+7 905 782 88 68</span>
         </div>
-        <div class="contact-link-text-icons">
-          <span title="Telegram">✈️</span>
-          <span title="WhatsApp">💬</span>
+        <div class="contact-link-messengers">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" title="Telegram" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" title="WhatsApp" />
         </div>
         <div class="contact-link-arrow">→</div>
       </a>
-.contact-link-text-icons {
-      display: flex;
-      gap: 8px;
-      margin-left: 12px;
-      font-size: 18px;
-    }
+
     </div>
   </div>
 </section>
